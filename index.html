@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Bài1</title>
+</head>
+<body>
+    <div class="btn">
+        <button class="btn-1">Show Notification</button>   
+    </div>
+
+   <ul class="list">
+        <!-- <li>Message</li> -->
+   </ul>
+
+   <script>
+    const buttonEl = document.querySelector(".btn-1");
+    const listEl = document.querySelector(".list");
+    let test =0;
+
+    function bai1(Number){
+        let letter = "";
+        for(let i=0;i<=Number;i++){
+            letter = letter + `<li>Message ${i} </li>` +`/n` ;
+        }
+        return letter;
+    }
+    buttonEl.addEventListener("click", () =>{
+        test++;
+        listEl.innerHTML = bai1(test);
+
+        setTimeout(() =>{
+            listEl.innerHTML = "";
+        },3000)
+    });
+
+    </Script>
+</body>
+</html>

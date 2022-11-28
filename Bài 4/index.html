@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Bài 4</title>
+</head>
+<body>
+    <h1>Scroll to see the animation</h1>
+    <div class="container">
+        <div class="box">
+            <p>Content</p>
+        </div>
+        <div class="box ">
+            <p>Content</p>
+        </div>
+        <div class="box target">
+            <p>Content</p>
+        </div>
+        <div class="box target">
+            <p>Content</p>
+        </div>
+        <div class="box target">
+            <p>Content</p>
+        </div>
+        <div class="box target">
+            <p>Content</p>
+        </div>
+        <div class="box target">
+            <p>Content</p>
+        </div>
+        <div class="box target">
+            <p>Content</p>
+        </div>
+        <div class="box target">
+            <p>Content</p>
+        </div>
+        <div class="box target">
+            <p>Content</p>
+        </div>
+        
+    </div>
+    <script>
+        const boxEl = document.querySelectorAll(".target");
+
+        window.onscroll = function(){
+            for(let i=0;i<boxEl.length;i++){
+                if( boxEl[i].getBoundingClientRect().y <=200){
+                boxEl[i].classList.add("active")
+            }
+            
+        }
+    }
+    </script>   
+</body>
+</html>

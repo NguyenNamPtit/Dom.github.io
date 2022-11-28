@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: steelblue;
+    display: flex;
+    justify-content: space-around;
+}
+nav div{
+    margin: 20px;
+}
+nav div a{
+    font-size: 24px;
+    color: #fff;
+    
+}
+nav div a:hover{
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+}
+.list-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.list-input div{
+    margin: 20px;
+}
+.list-input div input{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.list-input div label{
+    font-size: 24px;
+    color: teal;
+    margin-right: 20px;
+    
+}
+button{
+    padding:12px 24px ;
+    border-radius: 10px;
+    border: none;
+    background-color: orangered;
+    color: #fff;
+
+}
+.last-input label{
+    width: 300px !important;
+    height: 200px !important;
+}
+.error-message{
+    color: red;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="./sanpham.html">Sản phẩm</a>
+            </div>
+            <div>
+                <a href="./giohang.html">Giỏ hàng</a>
+            </div>
+            <div>
+                <a href="./admin.html">Admin</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <form class="list-input" novalidate>
+            <div>
+                <label for="name-product">Tên sản phẩm:</label>
+                <input type="text" id="name-product" name="title">
+                <p class="error-message"></p>
+            </div>
+            <div>
+                <label for="name-product">Hình ảnh:</label>
+                <input type="text" id="name-img" name="img">
+                <p class="error-message"></p>
+            </div>
+            <div>
+                <label for="name-product">Giá:</label>
+                <input type="text" id="price" name="price">
+                <p class="error-message"></p>
+            </div>
+            <div>
+                <label for="name-product">Mô tả:</label>
+                <input type="text" id="note" name="note">
+                <p class="error-message"></p>
+            </div>
+            <div>
+                <button type="submit" >Mua sản phẩm</button>
+            </div>
+        </form>
+    </main>
+    <script src="./admin.js"></script>
+</body>
+</html>

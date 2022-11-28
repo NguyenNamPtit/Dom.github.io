@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: steelblue;
+    display: flex;
+    justify-content: space-around;
+}
+nav div{
+    margin: 20px;
+}
+nav div a{
+    font-size: 24px;
+    color: #fff;
+    
+}
+nav div a:hover{
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+}
+.product{
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+img{
+    background-size: cover;
+    width: 200px;
+}
+.list-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+.product li {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    
+}
+.list-product p{
+    margin: 10px;
+
+}
+button{
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: orange    ;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+.list-product p a{
+    font-size: 20px;
+    color: red;
+}
+main{
+    max-width: 800px;
+    margin: 0 auto;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="./sanpham.html">Sản phẩm</a>
+            </div>
+            <div>
+                <a href="./giohang.html">Giỏ hàng</a>
+            </div>
+            <div>
+                <a href="./admin.html">Admin</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <ul class="product" id="product-list">
+            <!-- <li>
+                <div >
+                    <img src="https://salt.tikicdn.com/cache/750x750/media/catalog/producttmp/23/9d/16/64857db3b1864f96fe2b1f43f6ee101b.jpg.webp">
+                    <div class="list-product">
+                        <p>Áo Tot</p>
+                        <p><a>Giá:</a>1000000đ</p>
+                        <button>Mua</button>
+                    </div>
+
+                </div>
+            </li>
+            <li>
+                <img src="https://salt.tikicdn.com/cache/750x750/ts/product/7d/6c/51/484ec5976c5f3d4141753930aa332821.jpg.webp">
+                    <div class="list-product">
+                        <p>Áo Mu</p>
+                        <p><a>Giá:</a>2000000đ</p>
+                        <button>Mua</button>
+                    </div>
+            </li>
+            <li>
+                <img src="https://salt.tikicdn.com/cache/750x750/ts/product/5c/5a/49/5bdd12c14f2965fabfab6c5d2ab3ae0b.jpg.webp">
+                    <div class="list-product">
+                        <p>Áo Mc</p>
+                        <p><a>Giá:</a>3000000đ</p>
+                        <button>Mua</button>
+                    </div>
+            </li>
+            <li>
+                <img src="https://salt.tikicdn.com/cache/750x750/ts/product/3f/d6/1a/567af8563fe2d305ebd2139716dc8289.jpg.webp">
+                    <div class="list-product">
+                        <p>Áo Juve</p>
+                        <p><a>Giá:</a>4000000đ</p>
+                        <button>Mua</button>
+                    </div>
+            </li>
+            <li>
+                <img src="https://salt.tikicdn.com/cache/750x750/ts/product/a9/94/2f/a26c7bd763f4880410c0b9473b58751b.jpg.webp">
+                    <div class="list-product">
+                        <p>Áo PSG</p>
+                        <p><a>Giá:</a>5000000đ</p>
+                        <button>Mua</button>
+                    </div>
+            </li>
+            <li>
+                <img src="https://salt.tikicdn.com/cache/w1200/ts/product/b1/95/4c/6f574312113bf0b3799474c9e690eab1.jpg">
+                    <div class="list-product">
+                        <p>Áo Chelsea</p>
+                        <p><a>Giá:</a>6000000đ</p>
+                        <button>Mua</button>
+                    </div>
+            </li> -->
+        </ul>
+    </main>
+    <script src="db.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>

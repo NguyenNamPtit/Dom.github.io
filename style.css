@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: blueviolet;
+    position: relative;
+
+}
+.btn{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+.btn-1{
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    color: blueviolet;
+}
+.list{
+    position: fixed;
+    
+    bottom: 20px;
+    right: 20px;
+}
+.list li{
+    background-color: #fff;
+    border: none;
+    padding: 12px 24px;
+    list-style: none;
+    border-radius: 5px;
+    color: blue;
+}

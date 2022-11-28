@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    color: rgb(179, 131, 226);
+    font-size: 10rem;
+    opacity: 0.4;
+    margin-bottom: 107.2px;
+    margin-top: 107.2px;
+}
+input{
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border: none;
+    color: #444;
+    display: block;
+    box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.5);
+}
+.paragrap p{
+    color: #b5b5b5;
+    
+}
+.paragrap{
+    margin-top: 3rem;
+}

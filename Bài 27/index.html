@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Bài 27</title>
+</head>
+<body>
+    <div class="container">
+        <button class="action-btn">Show Notification</button>
+      </div>
+      
+      <ul class="toast-list">
+        <!-- <li>Message 1</li> -->
+      </ul>
+      <script>
+        const actionBtn = document.querySelector(".action-btn");
+const toastList = document.querySelector(".toast-list");
+// Tạo một biến để ghi nhớ các ô toast message đang hiển thị ngoài trình duyệt
+const toastCount = [];
+
+// Hàm này sử dụng để tạo ra các chuỗi có dạng dưới đây dự vào tham số nhận được:
+/*
+ * Ví dụ hàm nhận tham số là [1, 2, 3] sẽ trả về chuỗi sau (ký tự '\n' có tác dụng tương tự với Enter xuống dòng):
+ *   `<li>Message 1</li>\n
+ *    <li>Message 2</li>\n
+ *    <li>Message 3</li>\n
+ *   `
+ */
+// Có 2 cách để viết hàm 'generateMesage':
+// Cách 1: Sử dụng vòng lặp for.
+function generateMesage(messNumber) {
+  let result = "";
+
+  for (let i = 0; i < messNumber.length; i++) {
+    result = result + `<li>Message ${messNumber[i]}</li>` + "\n";
+  }
+
+  return result;
+}
+
+// Cách 2: Sử dụng phương thức lặp của mảng.
+// function generateMesage(messNumber) {
+//   return messNumber.map((num) => `<li>Message ${num}</li>`).join("\n");
+// }
+
+// Lắng nghe sự kiện click trên nút button, khi click thực hiện các logic sau:
+actionBtn.addEventListener("click", () => {
+  // Bước 1: Lấy ra kích thước ban đầu của mảng ghi nhớ
+  const toastLength = toastCount.length;
+
+  // Bước 2: Thêm vào mảng phần tử có giá trị bằng độ dài của mảng ghi nhớ cộng 1.
+  // Như vậy sau mỗi lần push chúng ta sẽ có một mảng ghi nhớ gồm các phần tử theo
+  // thứ tự số tăng dần. Ví dụ: Lần click chuột liên tiếp thứ 3 sẽ tạo ra mảng ghi nhớ
+  // có giá trị là [1, 2, 3]
+  toastCount.push(toastLength + 1);
+
+  // Bước 3: Truyền mảng ghi nhớ đã được cập nhật thông tin vào hàm 'generateMesage' để
+  // tạo ra chuỗi ký tự HTML cần truyền vào làm nội dụng của 'toastList' và gán vào nội
+  // dung của nó qua thuộc tính 'innerHTML'
+  toastList.innerHTML = generateMesage(toastCount);
+
+  // Bước 4: Đặt setTimeout để sau một khoảng thời gian quy định sẽ render lại nội dung HTML
+  // của 'toastList' để làm ẩn đi các toast message cũ
+  setTimeout(() => {
+    // Bước 4.1: Bỏ đi phần tử đầu tiên của mảng ghi nhớ
+    toastCount.shift();
+
+    // Bước 4.2: Render lại nội dung HTML của 'toastList' sau khi đã bỏ đi phần tử đầu tiên
+    toastList.innerHTML = generateMesage(toastCount);
+  }, 3000);
+});
+
+      </Script>  
+</body>
+</html>
