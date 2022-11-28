@@ -23,7 +23,7 @@ const handleDelete = (e) => {
   if(confirm("Ban co chac muon xoa ?")){
     const index = products.findIndex((pr)=>pr.id === ("id"+ e));
     products.splice(index, 1);
-    // localStorage.setItem("products", JSON.stringify(products));
+    localStorage.setItem("products", JSON.stringify(products));
     productList.innerHTML = "";
     productList.innerHTML = productss(products);
   }
